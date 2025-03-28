@@ -49,6 +49,7 @@ console.log(minWeight);
 
 // Snack 2: Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”. Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
+// genero l'array che contiene le squadre, ciascuna con le 3 proprietà richieste
 const squadre = [
     {
         nome : "Milan",
@@ -81,3 +82,12 @@ const squadre = [
         falliSubiti : 0,
     }
 ]
+
+// creo la funzione per generare randomicamente il numero dei punti di ogni squadra
+const generateRandomPoints = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// attribuisco agli oggetti dell'array i valori generati con un range che va da 0 a 114 (38 giornate * 3 punti disponibili)
+for (let i = 0; i < squadre.length; i++) {
+    squadre[i].puntiFatti = generateRandomPoints(0,114)
+}
