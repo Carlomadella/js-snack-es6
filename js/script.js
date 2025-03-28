@@ -99,6 +99,19 @@ const generateRandomFouls = (min, max) => {
 // attribuisco agli oggetti dell'array i valori generati con un range che va da 0 a 30
 for (let i = 0; i < squadre.length; i++) {
     squadre[i].falliSubiti = generateRandomFouls(0,30)
+
 }
+
+const onlyFoulsAndPoints = [];
+
+for (let i = 0; i < squadre.length; i++) {
+    const points = squadre[i].puntiFatti;
+    const fouls = squadre[i].falliSubiti;
+    onlyFoulsAndPoints.push(points, fouls)
+}
+
+
+
+console.log(onlyFoulsAndPoints);
 
 console.log(squadre);
