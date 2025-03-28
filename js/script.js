@@ -33,3 +33,16 @@ console.log(bici);
 let pesoMinore = bici[0].peso;
 // creao una variabile per immagazzinare l'elemento dell'array con il peso minore
 let minWeight;
+
+// creo un ciclo for per confrontare gli elementi dell'array 
+for (let i = 0; i < bici.length; i++) {
+    // creao un if pe determinare quello con il peso minore
+    if (pesoMinore > bici[i].peso) {
+        pesoMinore = bici[i].peso;
+        minWeight = bici[i];
+    }
+}
+// stampo in console l'elemento con valore peso minore 
+console.log(minWeight);
+
+// FINE SNACK 1 
