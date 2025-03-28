@@ -91,3 +91,14 @@ const generateRandomPoints = (min, max) => {
 for (let i = 0; i < squadre.length; i++) {
     squadre[i].puntiFatti = generateRandomPoints(0,114)
 }
+
+// creo la funzione per generare randomicamente il numero di falli subiti da ogni squadra
+const generateRandomFouls = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// attribuisco agli oggetti dell'array i valori generati con un range che va da 0 a 30
+for (let i = 0; i < squadre.length; i++) {
+    squadre[i].falliSubiti = generateRandomFouls(0,30)
+}
+
+console.log(squadre);
